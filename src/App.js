@@ -22,21 +22,24 @@ import Rooms from "./pages/Rooms";
 
 function App() {
   return (
-     <Router>
+        <Router>
       <div>
-      <Navbar />
-        <div>
+       <Navbar/>
+
+        <Switch>
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/room/:roomId">
-            <Room />
-          </Route>
-          <Route exact path="/rooms">
+          <Route path="/rooms">
             <Rooms />
           </Route>
-          <Route  Component={Error} />
-        </div>
+          <Route path="/room">
+            <Room />
+          </Route>
+          <Route path="*">
+            <Error />
+          </Route>
+        </Switch>
       </div>
     </Router>
   );

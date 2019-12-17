@@ -1,9 +1,11 @@
 import React from 'react';
 
+import Hero from "../component/Hero";
 const Error = () => {
     return (
         <div>
-            Hello from error page
+            
+            404
         </div>
     );
 }
